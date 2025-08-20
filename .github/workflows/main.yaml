@@ -1,9 +1,13 @@
+# .github/workflows/main.yaml
 name: CI/CD Pipeline
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write  # allows Actions to push to gh-pages
 
 jobs:
   build-and-test:
