@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import './App.css';  // Import styles
-import ProductList from './components/ProductList';
-import ShoppingCart from './components/ShoppingCart';
+import './App.css'; // Import styles
+import ProductList from './ProductList';
+import ShoppingCart from './ShoppingCart';
 
+// Sample products
 const PRODUCTS = [
   { id: 1, name: 'T-shirt', price: 20 },
   { id: 2, name: 'Jeans', price: 40 },
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className="app-container">
       <h1>My E-Commerce Store</h1>
-      <div className="main-content">
+      <div className="main-content" style={{ display: 'flex', gap: '2rem' }}>
         <ProductList products={PRODUCTS} onAddToCart={addToCart} />
         <ShoppingCart items={cartItems} onRemove={removeFromCart} />
       </div>
